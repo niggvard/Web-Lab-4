@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: #0056D6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 0 auto 40px;
+            max-width: 1200px;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .feature {
+            background: #003BA0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .feature img {
+            margin-bottom: 15px;
+            width: 50px;
+        }
+
+        .laptop {
+            flex-shrink: 0;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .features {
+                align-items: center;
+            }
+
+            .laptop {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Header</div>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Using design to improve product development</h1>
+        </section>
+
+        <section class="content">
+            <div class="features">
+                <div class="feature">
+                    <img src="2.png" alt="Strategy Icon" /> <!-- Підставити зображення іконки Strategy -->
+                    <h2>Strategy</h2>
+                    <p>Strategic planning is an organization's process for defining their strategy so that they can accomplish specific goals and objectives.</p>
+                    <a href="#">more</a>
+                </div>
+
+                <div class="feature">
+                    <img src="3.png" alt="Concept Icon" /> <!-- Підставити зображення іконки Concept -->
+                    <h2>Concept</h2>
+                    <p>A business concept is a statement that describes the reach and reason of existence of a given business idea.</p>
+                    <a href="#">more</a>
+                </div>
+            </div>
+
+            <img class="laptop" src="1.png" alt="Laptop with website" /> <!-- Підставити зображення ноутбука -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        Footer
+    </footer>
+</body>
+</html>
